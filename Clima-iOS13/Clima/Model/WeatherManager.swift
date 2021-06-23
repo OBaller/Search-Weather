@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 protocol WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
     func didFailWithError(error: Error)
@@ -23,6 +24,7 @@ struct WeatherManager {
         let urlString = "\(weatherURL)&q=\(cityName)"
         performRequest(with: urlString)
     }
+    
     
     func performRequest(with urlString: String) {
         // 1. create a url
